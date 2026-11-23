@@ -1,0 +1,43 @@
+
+# ==========================================
+# STUDY MATE - AK
+# Python project dependencies
+# ==========================================
+
+# 1. Backend API
+fastapi
+uvicorn[standard]
+httpx
+
+# 2. Configuration and validation
+python-dotenv
+pydantic-settings
+python-multipart
+
+# 3. Database and migrations
+sqlalchemy
+alembic
+
+# 4. AI, embeddings and RAG
+sentence-transformers
+chromadb
+
+# 5. PDF processing
+PyMuPDF
+
+# 6. Scheduling and reminders
+APScheduler
+
+# 7. Testing
+pytest
+pytest-asyncio
+pytest-cov
+
+# 8. Code quality
+ruff
+
+# 9. Optional admin dashboard
+streamlit
+
+# 10. Future PostgreSQL support
+psycopg[binary]
