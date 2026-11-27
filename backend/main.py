@@ -1,3 +1,4 @@
+import logging
 from fastapi import FastAPI
 
 from backend.config import settings
@@ -8,12 +9,16 @@ from backend.schemas import (
     InfoResponse,
     RootResponse,
 )
+from backend.whatsapp.webhook import router as webhook_router
 
+# Temporary: core/logging.py replaces this on Day 14.
+logging.basicConfig(level=logging.INFO)
 app = FastAPI(
     title="AK - Study Mate",
     description="AK, the WhatsApp AI study assistant",
     version="1.0.0",
 )
+app.include_router(webhook_router)
 
 
 @app.get("/", response_model=RootResponse, summary="Welcome message")

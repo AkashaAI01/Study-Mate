@@ -22,3 +22,6 @@ storage/
 # Databases
 *.db
 *.sqlite3
+auth/
+node_modules/
+legacy/
